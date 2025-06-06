@@ -55,7 +55,7 @@
             font-family: 'Nunito', sans-serif;
         }
         .hero-bg {
-            background-image: url('https://i.ibb.co/r2NxKD4k/bue-jardin-super.jpg');
+            background-image: url('https://i.ibb.co/r2NxKD4/bue-jardin-super.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -79,6 +79,14 @@
         .gallery-item.hidden {
             display: none;
         }
+        .lang-btn {
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+        .lang-btn.active, .lang-btn:hover {
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-200">
@@ -86,28 +94,35 @@
     <header class="bg-gray-900/80 backdrop-blur-lg shadow-lg shadow-amber-500/5 sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-extrabold text-white">Lou mazet 1951</h1>
-            <div>
-                <a href="#description" class="hidden md:inline text-gray-300 hover:text-amber-400 px-4 transition-colors">La maison</a>
-                <a href="#photos" class="hidden md:inline text-gray-300 hover:text-amber-400 px-4 transition-colors">Photos</a>
-                <a href="#activites" class="hidden md:inline text-gray-300 hover:text-amber-400 px-4 transition-colors">Activités</a>
-                <a href="#reservation" class="bg-amber-500 text-gray-900 font-bold py-2 px-5 rounded-full hover:bg-amber-400 transition-colors">Réserver</a>
+            <div class="flex items-center">
+                <a href="#description" class="hidden md:inline text-gray-300 hover:text-amber-400 px-4 transition-colors" data-translate="nav_home">La maison</a>
+                <a href="#photos" class="hidden md:inline text-gray-300 hover:text-amber-400 px-4 transition-colors" data-translate="nav_photos">Photos</a>
+                <a href="#activites" class="hidden md:inline text-gray-300 hover:text-amber-400 px-4 transition-colors" data-translate="nav_activities">Activités</a>
+                <a href="#reservation" class="bg-amber-500 text-gray-900 font-bold py-2 px-5 rounded-full hover:bg-amber-400 transition-colors" data-translate="nav_book">Réserver</a>
+                <!-- Language Switcher -->
+                <div id="lang-switcher" class="ml-6 flex space-x-3">
+                    <img src="https://flagcdn.com/w20/fr.png" alt="Français" class="lang-btn active" data-lang="fr">
+                    <img src="https://flagcdn.com/w20/gb.png" alt="English" class="lang-btn" data-lang="en">
+                    <img src="https://flagcdn.com/w20/de.png" alt="Deutsch" class="lang-btn" data-lang="de">
+                    <img src="https://flagcdn.com/w20/nl.png" alt="Nederlands" class="lang-btn" data-lang="nl">
+                </div>
             </div>
         </nav>
     </header>
 
     <section class="hero-bg h-[70vh] text-white flex items-center justify-center">
         <div class="container mx-auto px-6 text-center bg-black bg-opacity-60 p-10 rounded-xl shadow-2xl">
-            <h2 class="text-5xl md:text-6xl font-extrabold mb-4">Votre Échappée Belle</h2>
-            <p class="text-lg md:text-xl mb-8">Un mazet authentique rénové, entre les Cévennes (patrimoine mondial de l'UNESCO) et la Méditerranée.</p>
-            <a href="#reservation" class="bg-white text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-gray-200 transition-colors text-lg">Réserver mon séjour en famille</a>
+            <h2 class="text-5xl md:text-6xl font-extrabold mb-4" data-translate="hero_title">Votre Échappée Belle</h2>
+            <p class="text-lg md:text-xl mb-8" data-translate="hero_subtitle">Un mazet authentique rénové, entre les Cévennes (patrimoine mondial de l'UNESCO) et la Méditerranée.</p>
+            <a href="#reservation" class="bg-white text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-gray-200 transition-colors text-lg" data-translate="hero_button">Réserver mon séjour en famille</a>
         </div>
     </section>
 
     <section id="description" class="py-20">
         <div class="container mx-auto px-6">
             <div class="text-center">
-                <h3 class="text-4xl font-extrabold text-amber-400 mb-4">Un séjour convivial vous attend</h3>
-                <p class="max-w-3xl mx-auto text-gray-300 text-lg">
+                <h3 class="text-4xl font-extrabold text-amber-400 mb-4" data-translate="intro_title">Un séjour convivial vous attend</h3>
+                <p class="max-w-3xl mx-auto text-gray-300 text-lg" data-translate="intro_text">
                     Bienvenue dans notre mazet de 1951, entièrement rénové à Saint-Nazaire-des-Gardies. Situé idéalement entre mer et montagne, c'est le lieu parfait pour des vacances en famille ou entre amis, pouvant accueillir jusqu'à 13 personnes.
                 </p>
             </div>
@@ -116,11 +131,11 @@
                     <img src="https://i.ibb.co/8npnx8rC/vue-bouada-et-pisince.jpg" alt="Espace bar extérieur et piscine du gîte pour 13 personnes" class="w-full h-auto object-cover">
                 </div>
                 <div>
-                    <h4 class="font-bold text-3xl mb-4 text-white">Le logement</h4>
-                    <p class="text-gray-300 mb-4">
+                    <h4 class="font-bold text-3xl mb-4 text-white" data-translate="accom_title">Le logement</h4>
+                    <p class="text-gray-300 mb-4" data-translate="accom_text_1">
                         Pour votre confort, la cuisine, le salon et la salle à manger sont **climatisés**. La 4ᵉ chambre est un **chalet indépendant** offrant calme et intimité. Profitez de notre cuisine d'été avec **plancha et barbecue** pour des repas mémorables. Pour le bonheur des petits comme des grands, un **écran interactif géant** de 75 pouces permet de jouer, dessiner et regarder des films en famille.
                     </p>
-                     <p class="text-gray-300">
+                     <p class="text-gray-300" data-translate="accom_text_2">
                         Le mazet est entièrement équipé pour les tout-petits (lit parapluie, chaise haute, etc.) pour que vous puissiez voyager léger.
                     </p>
                 </div>
@@ -130,18 +145,18 @@
     
     <section id="activites" class="py-20 bg-pattern-dark">
         <div class="container mx-auto px-6 text-center">
-            <h3 class="text-4xl font-extrabold text-amber-400 mb-12">Un Paradis pour Petits et Grands</h3>
+            <h3 class="text-4xl font-extrabold text-amber-400 mb-12" data-translate="activities_title">Un Paradis pour Petits et Grands</h3>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 max-w-7xl mx-auto">
-                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5.636 5.636a9 9 0 1 1 12.728 0M12 3v9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg><span class="font-semibold text-white text-sm">Piscine</span></div>
-                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.362-3.797A8.333 8.333 0 0 1 15.362 5.214Z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 21a8.25 8.25 0 0 0 3.86-1.026M18.75 1.936a7.5 7.5 0 0 0-4.18-1.412A12.27 12.27 0 0 0 9 3c-2.164 0-4.12.79-5.617 2.149a12.009 12.009 0 0 0-2.31 4.145 12.009 12.009 0 0 0 .548 10.542A12.036 12.036 0 0 0 9 21c2.193 0 4.22-.818 5.783-2.186a12.04 12.04 0 0 0 2.96-5.458 11.963 11.963 0 0 0-1.02-6.983 7.502 7.502 0 0 0-1.94-2.438Z" /></svg><span class="font-semibold text-white text-sm">Jacuzzi</span></div>
-                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg><span class="font-semibold text-white text-sm text-center">Écran Interactif</span></div>
-                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg><span class="font-semibold text-white text-sm">Barbecue</span></div>
-                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><span class="font-semibold text-white text-sm">Plancha</span></div>
-                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 9.563A2.25 2.25 0 0 1 11.25 7.5h1.5A2.25 2.25 0 0 1 15 9.75v4.5A2.25 2.25 0 0 1 12.75 16.5h-1.5A2.25 2.25 0 0 1 9 14.25v-4.5Z" /></svg><span class="font-semibold text-white text-sm">Pétanque</span></div>
-                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.75a5.25 5.25 0 0 1 5.25 5.25H6.75a5.25 5.25 0 0 1 5.25-5.25Z M12 6.75V3m0 3.75a5.25 5.25 0 0 0-5.25 5.25H17.25a5.25 5.25 0 0 0-5.25-5.25Z M12 18.75V12m0 6.75a5.25 5.25 0 0 1-5.25-5.25h10.5a5.25 5.25 0 0 1-5.25 5.25Z" /></svg><span class="font-semibold text-white text-sm">Trampoline</span></div>
-                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 6h-15a2.25 2.25 0 0 0-2.25 2.25v5.25a2.25 2.25 0 0 0 2.25 2.25h15a2.25 2.25 0 0 0 2.25-2.25V8.25A2.25 2.25 0 0 0 19.5 6Z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15.75V12m0 0V8.25m0 3.75h3m-3 0H9"></path></svg><span class="font-semibold text-white text-sm">Ping-Pong</span></div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5.636 5.636a9 9 0 1 1 12.728 0M12 3v9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg><span class="font-semibold text-white text-sm" data-translate="amenity_pool">Piscine</span></div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.362-3.797A8.333 8.333 0 0 1 15.362 5.214Z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 21a8.25 8.25 0 0 0 3.86-1.026M18.75 1.936a7.5 7.5 0 0 0-4.18-1.412A12.27 12.27 0 0 0 9 3c-2.164 0-4.12.79-5.617 2.149a12.009 12.009 0 0 0-2.31 4.145 12.009 12.009 0 0 0 .548 10.542A12.036 12.036 0 0 0 9 21c2.193 0 4.22-.818 5.783-2.186a12.04 12.04 0 0 0 2.96-5.458 11.963 11.963 0 0 0-1.02-6.983 7.502 7.502 0 0 0-1.94-2.438Z" /></svg><span class="font-semibold text-white text-sm" data-translate="amenity_jacuzzi">Jacuzzi</span></div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg><span class="font-semibold text-white text-sm text-center" data-translate="amenity_screen">Écran Interactif</span></div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg><span class="font-semibold text-white text-sm" data-translate="amenity_bbq">Barbecue</span></div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><span class="font-semibold text-white text-sm" data-translate="amenity_plancha">Plancha</span></div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 9.563A2.25 2.25 0 0 1 11.25 7.5h1.5A2.25 2.25 0 0 1 15 9.75v4.5A2.25 2.25 0 0 1 12.75 16.5h-1.5A2.25 2.25 0 0 1 9 14.25v-4.5Z" /></svg><span class="font-semibold text-white text-sm" data-translate="amenity_petanque">Pétanque</span></div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.75a5.25 5.25 0 0 1 5.25 5.25H6.75a5.25 5.25 0 0 1 5.25-5.25Z M12 6.75V3m0 3.75a5.25 5.25 0 0 0-5.25 5.25H17.25a5.25 5.25 0 0 0-5.25-5.25Z M12 18.75V12m0 6.75a5.25 5.25 0 0 1-5.25-5.25h10.5a5.25 5.25 0 0 1-5.25 5.25Z" /></svg><span class="font-semibold text-white text-sm" data-translate="amenity_trampoline">Trampoline</span></div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 6h-15a2.25 2.25 0 0 0-2.25 2.25v5.25a2.25 2.25 0 0 0 2.25 2.25h15a2.25 2.25 0 0 0 2.25-2.25V8.25A2.25 2.25 0 0 0 19.5 6Z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15.75V12m0 0V8.25m0 3.75h3m-3 0H9"></path></svg><span class="font-semibold text-white text-sm" data-translate="amenity_pingpong">Ping-Pong</span></div>
             </div>
-            <div class="mt-8 text-gray-300">
+            <div class="mt-8 text-gray-300" data-translate="activities_more">
                 <p>... mais aussi un **parc de jeux** pour enfants, des **vélos** à disposition, et un **terrain de tennis** gratuit à 5 minutes !</p>
             </div>
         </div>
@@ -149,29 +164,29 @@
 
     <section id="photos" class="py-20">
         <div class="container mx-auto px-6">
-            <h3 class="text-4xl font-extrabold text-center mb-6 text-amber-400">Explorez le Mazet</h3>
+            <h3 class="text-4xl font-extrabold text-center mb-6 text-amber-400" data-translate="gallery_title">Explorez le Mazet</h3>
             <div id="gallery-filters" class="flex justify-center flex-wrap gap-4 mb-12">
-                <button class="filter-button active bg-amber-500 text-gray-900 font-bold py-2 px-5 rounded-full" data-filter="all">Tous</button>
-                <button class="filter-button bg-gray-700 text-gray-200 font-bold py-2 px-5 rounded-full hover:bg-amber-500 hover:text-gray-900 transition-colors" data-filter="exterieur">Extérieur</button>
-                <button class="filter-button bg-gray-700 text-gray-200 font-bold py-2 px-5 rounded-full hover:bg-amber-500 hover:text-gray-900 transition-colors" data-filter="vie">Pièces de vie</button>
-                <button class="filter-button bg-gray-700 text-gray-200 font-bold py-2 px-5 rounded-full hover:bg-amber-500 hover:text-gray-900 transition-colors" data-filter="chambres">Chambres</button>
-                <button class="filter-button bg-gray-700 text-gray-200 font-bold py-2 px-5 rounded-full hover:bg-amber-500 hover:text-gray-900 transition-colors" data-filter="detente">Détente</button>
+                <button class="filter-button active bg-amber-500 text-gray-900 font-bold py-2 px-5 rounded-full" data-filter="all" data-translate="filter_all">Tous</button>
+                <button class="filter-button bg-gray-700 text-gray-200 font-bold py-2 px-5 rounded-full hover:bg-amber-500 hover:text-gray-900 transition-colors" data-filter="exterieur" data-translate="filter_exterior">Extérieur</button>
+                <button class="filter-button bg-gray-700 text-gray-200 font-bold py-2 px-5 rounded-full hover:bg-amber-500 hover:text-gray-900 transition-colors" data-filter="vie" data-translate="filter_living">Pièces de vie</button>
+                <button class="filter-button bg-gray-700 text-gray-200 font-bold py-2 px-5 rounded-full hover:bg-amber-500 hover:text-gray-900 transition-colors" data-filter="chambres" data-translate="filter_rooms">Chambres</button>
+                <button class="filter-button bg-gray-700 text-gray-200 font-bold py-2 px-5 rounded-full hover:bg-amber-500 hover:text-gray-900 transition-colors" data-filter="detente" data-translate="filter_relax">Détente</button>
             </div>
             <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur"><img src="https://i.ibb.co/mC2F216C/2150dece-6bac-4f3a-b951-8f4723766b6a.jpg" alt="Piscine privée avec vue sur le gîte pour 13 personnes" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Piscine & Vue</h4></div>
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="vie"><img src="https://i.ibb.co/YF3kQ6rg/cuisine.jpg" alt="Cuisine ouverte et équipée du gîte" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">La Cuisine</h4></div>
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="chambres"><img src="https://i.ibb.co/vfvnWtK/Chambre-suite-parental.jpg" alt="Suite parentale spacieuse" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Suite Parentale</h4></div>
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="detente"><img src="https://i.ibb.co/BVhxXpPV/9e34b306-3968-4e35-88ce-3a87d7cbca3f.jpg" alt="Jacuzzi extérieur pour la détente" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Le Jacuzzi</h4></div>
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="detente vie"><img src="https://i.ibb.co/0p6ZF1VC/ecran-numerique-interactif-education-digitale-ecole-primaire-jpg.webp" alt="Écran interactif géant pour jeux et films" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">L'Écran de Jeux Interactif</h4></div>
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur"><img src="https://i.ibb.co/nM515h9F/b3e4ca8b-5bdb-4035-830f-be62eaacbf7f.jpg" alt="Grande terrasse aménagée pour repas en groupe" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">La Terrasse Aménagée</h4></div>
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="chambres"><img src="https://i.ibb.co/gMwqxKf1/eec26855-6480-46ed-ab6b-025ddb9e094a.jpg" alt="Intérieur du chalet indépendant" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Intérieur du Chalet</h4></div>
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="detente exterieur"><img src="https://i.ibb.co/9k8y6Wn3/168c251e-7b25-45e4-b63e-66bf9b59cb19.jpg" alt="Terrain de pétanque dans le jardin" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Le Terrain de Pétanque</h4></div>
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="vie"><img src="https://i.ibb.co/jYxFMP8/Whats-App-Image-2025-06-06-at-13-13-48-2.jpg" alt="Salon convivial avec cheminée" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Le Salon</h4></div>
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur"><img src="https://i.ibb.co/pr5ZffdD/Whats-App-Image-2025-06-06-at-13-19-32.jpg" alt="Vue du jardin verdoyant" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Vue du Jardin</h4></div>
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur"><img src="https://i.ibb.co/twWJRMWx/Whats-App-Image-2025-06-06-at-13-19-24.jpg" alt="Coin repas extérieur sur la terrasse" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Coin Repas Extérieur</h4></div>
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur"><img src="https://i.ibb.co/QvY6BLBp/vue-entree-parking-et-jardin.jpg" alt="Vue de l'entrée et du parking privé" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Entrée & Parking</h4></div>
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="chambres"><img src="https://i.ibb.co/JwQQZRRw/chambre-mezzanine-double.jpg" alt="Chambre en mezzanine avec lit double" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Chambre Mezzanine Double</h4></div>
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="chambres"><img src="https://i.ibb.co/s9jZfgsg/chambre-mezannine-simple.jpg" alt="Chambre en mezzanine avec lit simple" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Chambre Mezzanine Simple</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur"><img src="https://i.ibb.co/mC2F216/2150dece-6bac-4f3a-b951-8f4723766b6a.jpg" alt="Piscine privée avec vue sur le gîte pour 13 personnes" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl" data-translate="gallery_pool">Piscine & Vue</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="vie"><img src="https://i.ibb.co/YF3kQ6rg/cuisine.jpg" alt="Cuisine ouverte et équipée du gîte" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl" data-translate="gallery_kitchen">La Cuisine</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="chambres"><img src="https://i.ibb.co/vfvnWtK/Chambre-suite-parental.jpg" alt="Suite parentale spacieuse" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl" data-translate="gallery_master_suite">Suite Parentale</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="detente"><img src="https://i.ibb.co/BVhxXpPV/9e34b306-3968-4e35-88ce-3a87d7cbca3f.jpg" alt="Jacuzzi extérieur pour la détente" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl" data-translate="gallery_jacuzzi">Le Jacuzzi</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="detente vie"><img src="https://i.ibb.co/0p6ZF1VC/ecran-numerique-interactif-education-digitale-ecole-primaire-jpg.webp" alt="Écran interactif géant pour jeux et films" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl" data-translate="gallery_screen">L'Écran de Jeux Interactif</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur"><img src="https://i.ibb.co/nM515h9F/b3e4ca8b-5bdb-4035-830f-be62eaacbf7f.jpg" alt="Grande terrasse aménagée pour repas en groupe" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl" data-translate="gallery_terrace">La Terrasse Aménagée</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="chambres"><img src="https://i.ibb.co/gMwqxKf1/eec26855-6480-46ed-ab6b-025ddb9e094a.jpg" alt="Intérieur du chalet indépendant" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl" data-translate="gallery_chalet">Intérieur du Chalet</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="detente exterieur"><img src="https://i.ibb.co/9k8y6Wn3/168c251e-7b25-45e4-b63e-66bf9b59cb19.jpg" alt="Terrain de pétanque dans le jardin" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl" data-translate="gallery_petanque">Le Terrain de Pétanque</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="vie"><img src="https://i.ibb.co/jYxFMP8/Whats-App-Image-2025-06-06-at-13-13-48-2.jpg" alt="Salon convivial avec cheminée" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl" data-translate="gallery_lounge">Le Salon</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur"><img src="https://i.ibb.co/pr5ZffdD/Whats-App-Image-2025-06-06-at-13-19-32.jpg" alt="Vue du jardin verdoyant" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl" data-translate="gallery_garden_view">Vue du Jardin</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur"><img src="https://i.ibb.co/twWJRMWx/Whats-App-Image-2025-06-06-at-13-19-24.jpg" alt="Coin repas extérieur sur la terrasse" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl" data-translate="gallery_dining">Coin Repas Extérieur</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur"><img src="https://i.ibb.co/QvY6BLBp/vue-entree-parking-et-jardin.jpg" alt="Vue de l'entrée et du parking privé" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl" data-translate="gallery_parking">Entrée & Parking</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="chambres"><img src="https://i.ibb.co/JwQQZRRw/chambre-mezzanine-double.jpg" alt="Chambre en mezzanine avec lit double" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl" data-translate="gallery_mezz_double">Chambre Mezzanine Double</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="chambres"><img src="https://i.ibb.co/s9jZfgsg/chambre-mezannine-simple.jpg" alt="Chambre en mezzanine avec lit simple" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl" data-translate="gallery_mezz_single">Chambre Mezzanine Simple</h4></div>
             </div>
         </div>
     </section>
@@ -179,12 +194,12 @@
     <section class="py-20 bg-gray-800">
          <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
-                 <h3 class="text-4xl font-extrabold mb-6 text-amber-400">Bon à savoir</h3>
+                 <h3 class="text-4xl font-extrabold mb-6 text-amber-400" data-translate="info_title">Bon à savoir</h3>
                  <ul class="space-y-4 text-gray-300">
-                     <li class="flex items-start"><svg class="w-6 h-6 text-amber-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span>**Piscine** : ouverte du 15 Mai au 15 Octobre.</span></li>
-                     <li class="flex items-start"><svg class="w-6 h-6 text-amber-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m-4-5a1 1 0 011-1h2a1 1 0 110 2H6a1 1 0 01-1-1zm14-5a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1zm-4-1.5a.5.5 0 11-1 0 .5.5 0 011 0zm-2 3a.5.5 0 11-1 0 .5.5 0 011 0zm-2 3a.5.5 0 11-1 0 .5.5 0 011 0z"></path></svg><span>**Jacuzzi** : disponible toute l'année pour votre détente.</span></li>
-                     <li class="flex items-start"><svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg><span>**Musique extérieure interdite** pour le respect du voisinage.</span></li>
-                     <li class="flex items-start"><svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg><span>Logement non adapté aux fêtes (étudiants, EVG/EVJF...).</span></li>
+                     <li class="flex items-start"><svg class="w-6 h-6 text-amber-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span data-translate="info_pool">**Piscine** : ouverte du 15 Mai au 15 Octobre.</span></li>
+                     <li class="flex items-start"><svg class="w-6 h-6 text-amber-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m-4-5a1 1 0 011-1h2a1 1 0 110 2H6a1 1 0 01-1-1zm14-5a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1zm-4-1.5a.5.5 0 11-1 0 .5.5 0 011 0zm-2 3a.5.5 0 11-1 0 .5.5 0 011 0zm-2 3a.5.5 0 11-1 0 .5.5 0 011 0z"></path></svg><span data-translate="info_jacuzzi">**Jacuzzi** : disponible toute l'année pour votre détente.</span></li>
+                     <li class="flex items-start"><svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg><span data-translate="info_music">**Musique extérieure interdite** pour le respect du voisinage.</span></li>
+                     <li class="flex items-start"><svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg><span data-translate="info_parties">Logement non adapté aux fêtes (étudiants, EVG/EVJF...).</span></li>
                  </ul>
             </div>
             <div class="rounded-lg overflow-hidden shadow-xl">
@@ -196,18 +211,18 @@
     <section id="reservation" class="py-20 bg-gray-900">
         <div class="container mx-auto px-6">
             <div class="max-w-2xl mx-auto bg-gray-800 p-8 md:p-12 rounded-2xl shadow-2xl border border-gray-700">
-                <h3 class="text-4xl font-extrabold text-center mb-4 text-amber-400">Contact & Réservation</h3>
-                <p class="text-center text-gray-300 mb-8">Envoyez-nous une demande et nous vous répondrons sous 24h.</p>
+                <h3 class="text-4xl font-extrabold text-center mb-4 text-amber-400" data-translate="form_title">Contact & Réservation</h3>
+                <p class="text-center text-gray-300 mb-8" data-translate="form_subtitle">Envoyez-nous une demande et nous vous répondrons sous 24h.</p>
                 <form action="https://formspree.io/f/xzzgdeog" method="POST" class="space-y-6">
-                    <div><label for="name" class="block text-sm font-medium text-gray-300">Nom complet</label><input type="text" id="name" name="Nom" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"></div>
-                    <div><label for="email" class="block text-sm font-medium text-gray-300">Adresse e-mail</label><input type="email" id="email" name="Email" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"></div>
+                    <div><label for="name" class="block text-sm font-medium text-gray-300" data-translate="form_name">Nom complet</label><input type="text" id="name" name="Nom" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"></div>
+                    <div><label for="email" class="block text-sm font-medium text-gray-300" data-translate="form_email">Adresse e-mail</label><input type="email" id="email" name="Email" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"></div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div><label for="checkin" class="block text-sm font-medium text-gray-300">Date d'arrivée</label><input type="date" id="checkin" name="Arrivée" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500" style="color-scheme: dark;"></div>
-                        <div><label for="checkout" class="block text-sm font-medium text-gray-300">Date de départ</label><input type="date" id="checkout" name="Départ" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500" style="color-scheme: dark;"></div>
+                        <div><label for="checkin" class="block text-sm font-medium text-gray-300" data-translate="form_checkin">Date d'arrivée</label><input type="date" id="checkin" name="Arrivée" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500" style="color-scheme: dark;"></div>
+                        <div><label for="checkout" class="block text-sm font-medium text-gray-300" data-translate="form_checkout">Date de départ</label><input type="date" id="checkout" name="Départ" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500" style="color-scheme: dark;"></div>
                     </div>
-                    <div><label for="guests" class="block text-sm font-medium text-gray-300">Nombre de voyageurs</label><input type="number" id="guests" name="Voyageurs" min="1" max="13" required placeholder="Jusqu'à 13 personnes" class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"></div>
-                    <div><label for="message" class="block text-sm font-medium text-gray-300">Message (facultatif)</label><textarea id="message" name="Message" rows="4" class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"></textarea></div>
-                    <div class="text-center pt-4"><button type="submit" class="w-full bg-amber-500 text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-amber-400 transition-colors text-lg">Envoyer ma demande de réservation</button></div>
+                    <div><label for="guests" class="block text-sm font-medium text-gray-300" data-translate="form_guests">Nombre de voyageurs</label><input type="number" id="guests" name="Voyageurs" min="1" max="13" required placeholder="Jusqu'à 13 personnes" class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500" data-translate-placeholder="form_guests_placeholder"></div>
+                    <div><label for="message" class="block text-sm font-medium text-gray-300" data-translate="form_message">Message (facultatif)</label><textarea id="message" name="Message" rows="4" class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"></textarea></div>
+                    <div class="text-center pt-4"><button type="submit" class="w-full bg-amber-500 text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-amber-400 transition-colors text-lg" data-translate="form_button">Envoyer ma demande de réservation</button></div>
                 </form>
             </div>
         </div>
@@ -221,45 +236,319 @@
     </footer>
 
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-        const today = new Date().toISOString().split('T')[0];
-        document.getElementById('checkin').setAttribute('min', today);
-        document.getElementById('checkin').addEventListener('change', function() {
-            const checkinDate = new Date(this.value);
-            checkinDate.setDate(checkinDate.getDate() + 1);
-            const nextDay = checkinDate.toISOString().split('T')[0];
-            document.getElementById('checkout').setAttribute('min', nextDay);
-        });
-        const filterButtons = document.querySelectorAll('#gallery-filters .filter-button');
-        const galleryItems = document.querySelectorAll('#gallery-grid .gallery-item');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
+        // --- MULTILINGUAL SCRIPT ---
+        const translations = {
+            fr: {
+                nav_home: "La maison",
+                nav_photos: "Photos",
+                nav_activities: "Activités",
+                nav_book: "Réserver",
+                hero_title: "Votre Échappée Belle",
+                hero_subtitle: "Un mazet authentique rénové, entre les Cévennes (patrimoine mondial de l'UNESCO) et la Méditerranée.",
+                hero_button: "Réserver mon séjour en famille",
+                intro_title: "Un séjour convivial vous attend",
+                intro_text: "Bienvenue dans notre mazet de 1951, entièrement rénové à Saint-Nazaire-des-Gardies. Situé idéalement entre mer et montagne, c'est le lieu parfait pour des vacances en famille ou entre amis, pouvant accueillir jusqu'à 13 personnes.",
+                accom_title: "Le logement",
+                accom_text_1: "Pour votre confort, la cuisine, le salon et la salle à manger sont **climatisés**. La 4ᵉ chambre est un **chalet indépendant** offrant calme et intimité. Profitez de notre cuisine d'été avec **plancha et barbecue** pour des repas mémorables. Pour le bonheur des petits comme des grands, un **écran interactif géant** de 75 pouces permet de jouer, dessiner et regarder des films en famille.",
+                accom_text_2: "Le mazet est entièrement équipé pour les tout-petits (lit parapluie, chaise haute, etc.) pour que vous puissiez voyager léger.",
+                activities_title: "Un Paradis pour Petits et Grands",
+                amenity_pool: "Piscine",
+                amenity_jacuzzi: "Jacuzzi",
+                amenity_screen: "Écran Interactif",
+                amenity_bbq: "Barbecue",
+                amenity_plancha: "Plancha",
+                amenity_petanque: "Pétanque",
+                amenity_trampoline: "Trampoline",
+                amenity_pingpong: "Ping-Pong",
+                activities_more: "... mais aussi un **parc de jeux** pour enfants, des **vélos** à disposition, et un **terrain de tennis** gratuit à 5 minutes !",
+                gallery_title: "Explorez le Mazet",
+                filter_all: "Tous",
+                filter_exterior: "Extérieur",
+                filter_living: "Pièces de vie",
+                filter_rooms: "Chambres",
+                filter_relax: "Détente",
+                gallery_pool: "Piscine & Vue",
+                gallery_kitchen: "La Cuisine",
+                gallery_master_suite: "Suite Parentale",
+                gallery_jacuzzi: "Le Jacuzzi",
+                gallery_screen: "L'Écran de Jeux Interactif",
+                gallery_terrace: "La Terrasse Aménagée",
+                gallery_chalet: "Intérieur du Chalet",
+                gallery_petanque: "Le Terrain de Pétanque",
+                gallery_lounge: "Le Salon",
+                gallery_garden_view: "Vue du Jardin",
+                gallery_dining: "Coin Repas Extérieur",
+                gallery_parking: "Entrée & Parking",
+                gallery_mezz_double: "Chambre Mezzanine Double",
+                gallery_mezz_single: "Chambre Mezzanine Simple",
+                info_title: "Bon à savoir",
+                info_pool: "**Piscine** : ouverte du 15 Mai au 15 Octobre.",
+                info_jacuzzi: "**Jacuzzi** : disponible toute l'année pour votre détente.",
+                info_music: "**Musique extérieure interdite** pour le respect du voisinage.",
+                info_parties: "Logement non adapté aux fêtes (étudiants, EVG/EVJF...).",
+                form_title: "Contact & Réservation",
+                form_subtitle: "Envoyez-nous une demande et nous vous répondrons sous 24h.",
+                form_name: "Nom complet",
+                form_email: "Adresse e-mail",
+                form_checkin: "Date d'arrivée",
+                form_checkout: "Date de départ",
+                form_guests: "Nombre de voyageurs",
+                form_guests_placeholder: "Jusqu'à 13 personnes",
+                form_message: "Message (facultatif)",
+                form_button: "Envoyer ma demande de réservation",
+            },
+            en: {
+                nav_home: "The House",
+                nav_photos: "Photos",
+                nav_activities: "Activities",
+                nav_book: "Book",
+                hero_title: "Your Beautiful Getaway",
+                hero_subtitle: "An authentic renovated mazet, between the Cévennes (UNESCO World Heritage) and the Mediterranean.",
+                hero_button: "Book my family stay",
+                intro_title: "A friendly stay awaits you",
+                intro_text: "Welcome to our 1951 mazet, completely renovated in Saint-Nazaire-des-Gardies. Ideally located between the sea and the mountains, it is the perfect place for holidays with family or friends, accommodating up to 13 people.",
+                accom_title: "The accommodation",
+                accom_text_1: "For your comfort, the kitchen, living room, and dining room are **air-conditioned**. The 4th bedroom is an **independent chalet** offering peace and privacy. Enjoy our summer kitchen with **plancha and barbecue** for memorable meals. For the delight of young and old, a **giant 75-inch interactive screen** allows for playing, drawing, and watching movies as a family.",
+                accom_text_2: "The mazet is fully equipped for toddlers (travel cot, high chair, etc.) so you can travel light.",
+                activities_title: "A Paradise for All Ages",
+                amenity_pool: "Pool",
+                amenity_jacuzzi: "Jacuzzi",
+                amenity_screen: "Interactive Screen",
+                amenity_bbq: "Barbecue",
+                amenity_plancha: "Plancha",
+                amenity_petanque: "Pétanque",
+                amenity_trampoline: "Trampoline",
+                amenity_pingpong: "Ping-Pong",
+                activities_more: "... but also a **playground** for children, **bikes** available, and a free **tennis court** 5 minutes away!",
+                gallery_title: "Explore the Mazet",
+                filter_all: "All",
+                filter_exterior: "Exterior",
+                filter_living: "Living areas",
+                filter_rooms: "Rooms",
+                filter_relax: "Relaxation",
+                gallery_pool: "Pool & View",
+                gallery_kitchen: "The Kitchen",
+                gallery_master_suite: "Master Suite",
+                gallery_jacuzzi: "The Jacuzzi",
+                gallery_screen: "The Interactive Game Screen",
+                gallery_terrace: "The Furnished Terrace",
+                gallery_chalet: "Chalet Interior",
+                gallery_petanque: "The Pétanque Court",
+                gallery_lounge: "The Lounge",
+                gallery_garden_view: "Garden View",
+                gallery_dining: "Outdoor Dining Area",
+                gallery_parking: "Entrance & Parking",
+                gallery_mezz_double: "Mezzanine Double Room",
+                gallery_mezz_single: "Mezzanine Single Room",
+                info_title: "Good to know",
+                info_pool: "**Pool**: open from May 15th to October 15th.",
+                info_jacuzzi: "**Jacuzzi**: available all year round for your relaxation.",
+                info_music: "**Outdoor music is forbidden** to respect the neighborhood.",
+                info_parties: "Accommodation not suitable for parties (students, stag/hen dos...).",
+                form_title: "Contact & Booking",
+                form_subtitle: "Send us a request and we will get back to you within 24 hours.",
+                form_name: "Full name",
+                form_email: "Email address",
+                form_checkin: "Check-in date",
+                form_checkout: "Check-out date",
+                form_guests: "Number of guests",
+                form_guests_placeholder: "Up to 13 people",
+                form_message: "Message (optional)",
+                form_button: "Send my booking request",
+            },
+            de: {
+                nav_home: "Das Haus",
+                nav_photos: "Fotos",
+                nav_activities: "Aktivitäten",
+                nav_book: "Buchen",
+                hero_title: "Ihre wunderschöne Auszeit",
+                hero_subtitle: "Ein authentisches renoviertes Mazet zwischen den Cevennen (UNESCO-Welterbe) und dem Mittelmeer.",
+                hero_button: "Meinen Familienurlaub buchen",
+                intro_title: "Ein freundlicher Aufenthalt erwartet Sie",
+                intro_text: "Willkommen in unserem 1951 erbauten Mazet, komplett renoviert in Saint-Nazaire-des-Gardies. Ideal zwischen Meer und Bergen gelegen, ist es der perfekte Ort für einen Urlaub mit Familie oder Freunden und bietet Platz für bis zu 13 Personen.",
+                accom_title: "Die Unterkunft",
+                accom_text_1: "Für Ihren Komfort sind Küche, Wohn- und Esszimmer **klimatisiert**. Das 4. Schlafzimmer ist ein **unabhängiges Chalet**, das Ruhe und Privatsphäre bietet. Genießen Sie unsere Sommerküche mit **Plancha und Grill** für unvergessliche Mahlzeiten. Zur Freude von Groß und Klein ermöglicht ein **riesiger 75-Zoll-interaktiver Bildschirm** das Spielen, Zeichnen und gemeinsame Anschauen von Filmen.",
+                accom_text_2: "Das Mazet ist komplett für Kleinkinder ausgestattet (Reisebett, Hochstuhl usw.), damit Sie mit leichtem Gepäck reisen können.",
+                activities_title: "Ein Paradies für Jung und Alt",
+                amenity_pool: "Pool",
+                amenity_jacuzzi: "Whirlpool",
+                amenity_screen: "Interaktiver Bildschirm",
+                amenity_bbq: "Grill",
+                amenity_plancha: "Plancha",
+                amenity_petanque: "Pétanque",
+                amenity_trampoline: "Trampolin",
+                amenity_pingpong: "Tischtennis",
+                activities_more: "... aber auch ein **Spielplatz** für Kinder, **Fahrräder** zur Verfügung und ein kostenloser **Tennisplatz** 5 Minuten entfernt!",
+                gallery_title: "Entdecken Sie das Mazet",
+                filter_all: "Alle",
+                filter_exterior: "Außenbereich",
+                filter_living: "Wohnbereiche",
+                filter_rooms: "Zimmer",
+                filter_relax: "Entspannung",
+                gallery_pool: "Pool & Aussicht",
+                gallery_kitchen: "Die Küche",
+                gallery_master_suite: "Mastersuite",
+                gallery_jacuzzi: "Der Whirlpool",
+                gallery_screen: "Der interaktive Spielbildschirm",
+                gallery_terrace: "Die möblierte Terrasse",
+                gallery_chalet: "Chalet-Innenraum",
+                gallery_petanque: "Der Pétanque-Platz",
+                gallery_lounge: "Das Wohnzimmer",
+                gallery_garden_view: "Gartenansicht",
+                gallery_dining: "Essbereich im Freien",
+                gallery_parking: "Eingang & Parkplatz",
+                gallery_mezz_double: "Doppelzimmer im Zwischengeschoss",
+                gallery_mezz_single: "Einzelzimmer im Zwischengeschoss",
+                info_title: "Gut zu wissen",
+                info_pool: "**Pool**: geöffnet vom 15. Mai bis 15. Oktober.",
+                info_jacuzzi: "**Whirlpool**: ganzjährig zur Entspannung verfügbar.",
+                info_music: "**Musik im Freien ist verboten**, um die Nachbarschaft zu respektieren.",
+                info_parties: "Unterkunft nicht für Partys (Studenten, Junggesellenabschiede...) geeignet.",
+                form_title: "Kontakt & Buchung",
+                form_subtitle: "Senden Sie uns eine Anfrage und wir werden uns innerhalb von 24 Stunden bei Ihnen melden.",
+                form_name: "Vollständiger Name",
+                form_email: "E-Mail-Adresse",
+                form_checkin: "Ankunftsdatum",
+                form_checkout: "Abreisedatum",
+                form_guests: "Anzahl der Gäste",
+                form_guests_placeholder: "Bis zu 13 Personen",
+                form_message: "Nachricht (optional)",
+                form_button: "Meine Buchungsanfrage senden",
+            },
+            nl: {
+                nav_home: "Het huis",
+                nav_photos: "Foto's",
+                nav_activities: "Activiteiten",
+                nav_book: "Boeken",
+                hero_title: "Uw prachtige uitje",
+                hero_subtitle: "Een authentieke gerenoveerde mazet, tussen de Cevennen (UNESCO Werelderfgoed) en de Middellandse Zee.",
+                hero_button: "Boek mijn familieverblijf",
+                intro_title: "Een gezellig verblijf wacht op u",
+                intro_text: "Welkom in onze mazet uit 1951, volledig gerenoveerd in Saint-Nazaire-des-Gardies. Ideaal gelegen tussen zee en bergen, het is de perfecte plek voor een vakantie met familie of vrienden, geschikt voor maximaal 13 personen.",
+                accom_title: "De accommodatie",
+                accom_text_1: "Voor uw comfort zijn de keuken, woonkamer en eetkamer voorzien van **airconditioning**. De 4e slaapkamer is een **onafhankelijk chalet** dat rust en privacy biedt. Geniet van onze zomerkeuken met **plancha en barbecue** voor onvergetelijke maaltijden. Voor het plezier van jong en oud is er een **gigantisch interactief scherm van 75 inch** om te spelen, tekenen en samen films te kijken.",
+                accom_text_2: "De mazet is volledig uitgerust voor peuters (reiswieg, kinderstoel, enz.), zodat u licht kunt reizen.",
+                activities_title: "Een paradijs voor jong en oud",
+                amenity_pool: "Zwembad",
+                amenity_jacuzzi: "Jacuzzi",
+                amenity_screen: "Interactief Scherm",
+                amenity_bbq: "Barbecue",
+                amenity_plancha: "Plancha",
+                amenity_petanque: "Pétanque",
+                amenity_trampoline: "Trampoline",
+                amenity_pingpong: "Tafeltennis",
+                activities_more: "... maar ook een **speeltuin** voor kinderen, **fietsen** beschikbaar, en een gratis **tennisbaan** op 5 minuten afstand!",
+                gallery_title: "Verken de Mazet",
+                filter_all: "Alles",
+                filter_exterior: "Buiten",
+                filter_living: "Leefruimtes",
+                filter_rooms: "Kamers",
+                filter_relax: "Ontspanning",
+                gallery_pool: "Zwembad & Uitzicht",
+                gallery_kitchen: "De Keuken",
+                gallery_master_suite: "Master Suite",
+                gallery_jacuzzi: "De Jacuzzi",
+                gallery_screen: "Het Interactieve Spelscherm",
+                gallery_terrace: "Het Ingerichte Terras",
+                gallery_chalet: "Interieur Chalet",
+                gallery_petanque: "De Pétanquebaan",
+                gallery_lounge: "De Woonkamer",
+                gallery_garden_view: "Uitzicht op de tuin",
+                gallery_dining: "Buiten Eethoek",
+                gallery_parking: "Ingang & Parkeerplaats",
+                gallery_mezz_double: "Tweepersoons Mezzanine Kamer",
+                gallery_mezz_single: "Eenpersoons Mezzanine Kamer",
+                info_title: "Goed om te weten",
+                info_pool: "**Zwembad**: geopend van 15 mei tot 15 oktober.",
+                info_jacuzzi: "**Jacuzzi**: het hele jaar door beschikbaar voor uw ontspanning.",
+                info_music: "**Buitenmuziek is verboden** om de buren te respecteren.",
+                info_parties: "Accommodatie niet geschikt voor feesten (studenten, vrijgezellenfeesten...).",
+                form_title: "Contact & Reservering",
+                form_subtitle: "Stuur ons een verzoek en wij nemen binnen 24 uur contact met u op.",
+                form_name: "Volledige naam",
+                form_email: "E-mailadres",
+                form_checkin: "Aankomstdatum",
+                form_checkout: "Vertrekdatum",
+                form_guests: "Aantal gasten",
+                form_guests_placeholder: "Tot 13 personen",
+                form_message: "Bericht (optioneel)",
+                form_button: "Mijn reserveringsaanvraag verzenden",
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
                 }
             });
-        }, { threshold: 0.1 });
-        galleryItems.forEach(item => { observer.observe(item); });
-        filterButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                filterButtons.forEach(btn => {
-                    btn.classList.remove('bg-amber-500', 'text-gray-900');
-                    btn.classList.add('bg-gray-700', 'text-gray-200');
+             document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-translate-placeholder');
+                if (translations[lang][key]) {
+                    el.placeholder = translations[lang][key];
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const langSwitcher = document.getElementById('lang-switcher');
+            langSwitcher.addEventListener('click', (e) => {
+                const target = e.target.closest('.lang-btn');
+                if (target) {
+                    const lang = target.getAttribute('data-lang');
+                    changeLanguage(lang);
+                    
+                    // Update active class
+                    langSwitcher.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+                    target.classList.add('active');
+                }
+            });
+
+            // --- SMOOTH SCROLL & DATE PICKER LOGIC ---
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
                 });
-                this.classList.add('bg-amber-500', 'text-gray-900');
-                this.classList.remove('bg-gray-700', 'text-gray-200');
-                const filter = this.getAttribute('data-filter');
-                galleryItems.forEach(item => {
-                    item.classList.add('hidden');
-                    if (item.dataset.category.includes(filter) || filter === 'all') {
-                       item.classList.remove('hidden');
+            });
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('checkin').setAttribute('min', today);
+            document.getElementById('checkin').addEventListener('change', function() {
+                const checkinDate = new Date(this.value);
+                checkinDate.setDate(checkinDate.getDate() + 1);
+                const nextDay = checkinDate.toISOString().split('T')[0];
+                document.getElementById('checkout').setAttribute('min', nextDay);
+            });
+
+            // --- GALLERY FILTER & ANIMATION ---
+            const filterButtons = document.querySelectorAll('#gallery-filters .filter-button');
+            const galleryItems = document.querySelectorAll('#gallery-grid .gallery-item');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
                     }
+                });
+            }, { threshold: 0.1 });
+            galleryItems.forEach(item => { observer.observe(item); });
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-amber-500', 'text-gray-900');
+                        btn.classList.add('bg-gray-700', 'text-gray-200');
+                    });
+                    this.classList.add('bg-amber-500', 'text-gray-900');
+                    this.classList.remove('bg-gray-700', 'text-gray-200');
+                    const filter = this.getAttribute('data-filter');
+                    galleryItems.forEach(item => {
+                        item.classList.add('hidden');
+                        if (item.dataset.category.includes(filter) || filter === 'all') {
+                           item.classList.remove('hidden');
+                        }
+                    });
                 });
             });
         });
