@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Nouvelle police de caractères : Nunito -->
+    <!-- Police de caractères : Nunito -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
         body {
@@ -26,6 +26,12 @@
              background-position:  10px 0, 10px 0, 0 0, 0 0;
              background-size: 20px 20px;
              background-repeat: repeat;
+        }
+        .gallery-item {
+            display: block;
+        }
+        .gallery-item.hidden {
+            display: none;
         }
     </style>
 </head>
@@ -84,41 +90,41 @@
     <section id="activites" class="py-20 bg-pattern-dark">
         <div class="container mx-auto px-6 text-center">
             <h3 class="text-4xl font-extrabold text-amber-400 mb-12">Un Paradis pour Petits et Grands</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 max-w-7xl mx-auto">
                 <!-- Items -->
-                <div class="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
-                    <svg class="w-14 h-14 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5.636 5.636a9 9 0 1 1 12.728 0M12 3v9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
-                    <span class="font-semibold text-white">Piscine sécurisée</span>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
+                    <svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5.636 5.636a9 9 0 1 1 12.728 0M12 3v9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+                    <span class="font-semibold text-white text-sm">Piscine</span>
                 </div>
-                 <div class="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
-                    <svg class="w-14 h-14 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.362-3.797A8.333 8.333 0 0 1 15.362 5.214Z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 21a8.25 8.25 0 0 0 3.86-1.026M18.75 1.936a7.5 7.5 0 0 0-4.18-1.412A12.27 12.27 0 0 0 9 3c-2.164 0-4.12.79-5.617 2.149a12.009 12.009 0 0 0-2.31 4.145 12.009 12.009 0 0 0 .548 10.542A12.036 12.036 0 0 0 9 21c2.193 0 4.22-.818 5.783-2.186a12.04 12.04 0 0 0 2.96-5.458 11.963 11.963 0 0 0-1.02-6.983 7.502 7.502 0 0 0-1.94-2.438Z" /></svg>
-                    <span class="font-semibold text-white">Jacuzzi</span>
+                 <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
+                    <svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.362-3.797A8.333 8.333 0 0 1 15.362 5.214Z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 21a8.25 8.25 0 0 0 3.86-1.026M18.75 1.936a7.5 7.5 0 0 0-4.18-1.412A12.27 12.27 0 0 0 9 3c-2.164 0-4.12.79-5.617 2.149a12.009 12.009 0 0 0-2.31 4.145 12.009 12.009 0 0 0 .548 10.542A12.036 12.036 0 0 0 9 21c2.193 0 4.22-.818 5.783-2.186a12.04 12.04 0 0 0 2.96-5.458 11.963 11.963 0 0 0-1.02-6.983 7.502 7.502 0 0 0-1.94-2.438Z" /></svg>
+                    <span class="font-semibold text-white text-sm">Jacuzzi</span>
                 </div>
-                <div class="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
-                    <svg class="w-14 h-14 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
-                    <span class="font-semibold text-white">Écran Interactif</span>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
+                    <svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
+                    <span class="font-semibold text-white text-sm text-center">Écran Interactif</span>
                 </div>
-                 <div class="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
-                    <svg class="w-14 h-14 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    <span class="font-semibold text-white">Barbecue</span>
+                 <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
+                    <svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <span class="font-semibold text-white text-sm">Barbecue</span>
                 </div>
-                <div class="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
-                     <svg class="w-14 h-14 text-amber-400 mb-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
+                     <svg class="w-12 h-12 text-amber-400 mb-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                      </svg>
-                    <span class="font-semibold text-white">Plancha</span>
+                    <span class="font-semibold text-white text-sm">Plancha</span>
                 </div>
-                 <div class="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
-                    <svg class="w-14 h-14 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 9.563A2.25 2.25 0 0 1 11.25 7.5h1.5A2.25 2.25 0 0 1 15 9.75v4.5A2.25 2.25 0 0 1 12.75 16.5h-1.5A2.25 2.25 0 0 1 9 14.25v-4.5Z" /></svg>
-                    <span class="font-semibold text-white">Pétanque</span>
+                 <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
+                    <svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 9.563A2.25 2.25 0 0 1 11.25 7.5h1.5A2.25 2.25 0 0 1 15 9.75v4.5A2.25 2.25 0 0 1 12.75 16.5h-1.5A2.25 2.25 0 0 1 9 14.25v-4.5Z" /></svg>
+                    <span class="font-semibold text-white text-sm">Pétanque</span>
                 </div>
-                 <div class="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
-                    <svg class="w-14 h-14 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.75a5.25 5.25 0 0 1 5.25 5.25H6.75a5.25 5.25 0 0 1 5.25-5.25Z M12 6.75V3m0 3.75a5.25 5.25 0 0 0-5.25 5.25H17.25a5.25 5.25 0 0 0-5.25-5.25Z M12 18.75V12m0 6.75a5.25 5.25 0 0 1-5.25-5.25h10.5a5.25 5.25 0 0 1-5.25 5.25Z" /></svg>
-                    <span class="font-semibold text-white">Trampoline</span>
+                 <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
+                    <svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.75a5.25 5.25 0 0 1 5.25 5.25H6.75a5.25 5.25 0 0 1 5.25-5.25Z M12 6.75V3m0 3.75a5.25 5.25 0 0 0-5.25 5.25H17.25a5.25 5.25 0 0 0-5.25-5.25Z M12 18.75V12m0 6.75a5.25 5.25 0 0 1-5.25-5.25h10.5a5.25 5.25 0 0 1-5.25 5.25Z" /></svg>
+                    <span class="font-semibold text-white text-sm">Trampoline</span>
                 </div>
-                 <div class="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
-                    <svg class="w-14 h-14 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 6h-15a2.25 2.25 0 0 0-2.25 2.25v5.25a2.25 2.25 0 0 0 2.25 2.25h15a2.25 2.25 0 0 0 2.25-2.25V8.25A2.25 2.25 0 0 0 19.5 6Z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15.75V12m0 0V8.25m0 3.75h3m-3 0H9"></path></svg>
-                    <span class="font-semibold text-white">Ping-Pong</span>
+                 <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
+                    <svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 6h-15a2.25 2.25 0 0 0-2.25 2.25v5.25a2.25 2.25 0 0 0 2.25 2.25h15a2.25 2.25 0 0 0 2.25-2.25V8.25A2.25 2.25 0 0 0 19.5 6Z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15.75V12m0 0V8.25m0 3.75h3m-3 0H9"></path></svg>
+                    <span class="font-semibold text-white text-sm">Ping-Pong</span>
                 </div>
             </div>
             <div class="mt-8 text-gray-300">
@@ -130,43 +136,72 @@
     <!-- Photo Gallery -->
     <section id="photos" class="py-20">
         <div class="container mx-auto px-6">
-            <h3 class="text-4xl font-extrabold text-center mb-12 text-amber-400">Explorez le Mazet</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <h3 class="text-4xl font-extrabold text-center mb-6 text-amber-400">Explorez le Mazet</h3>
+            
+            <!-- Filter Buttons -->
+            <div id="gallery-filters" class="flex justify-center flex-wrap gap-4 mb-12">
+                <button class="filter-button active bg-amber-500 text-gray-900 font-bold py-2 px-5 rounded-full" data-filter="all">Tous</button>
+                <button class="filter-button bg-gray-700 text-gray-200 font-bold py-2 px-5 rounded-full hover:bg-amber-500 hover:text-gray-900 transition-colors" data-filter="exterieur">Extérieur</button>
+                <button class="filter-button bg-gray-700 text-gray-200 font-bold py-2 px-5 rounded-full hover:bg-amber-500 hover:text-gray-900 transition-colors" data-filter="vie">Pièces de vie</button>
+                <button class="filter-button bg-gray-700 text-gray-200 font-bold py-2 px-5 rounded-full hover:bg-amber-500 hover:text-gray-900 transition-colors" data-filter="chambres">Chambres</button>
+                <button class="filter-button bg-gray-700 text-gray-200 font-bold py-2 px-5 rounded-full hover:bg-amber-500 hover:text-gray-900 transition-colors" data-filter="detente">Détente</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <div class="group relative rounded-lg overflow-hidden shadow-lg">
-                    <img src="<a href="https://ibb.co/JRGFG05R"><img src="https://i.ibb.co/mC2F216C/2150dece-6bac-4f3a-b951-8f4723766b6a.jpg" alt="2150dece-6bac-4f3a-b951-8f4723766b6a" border="0"></a>" alt="Vue sur la piscine et le mazet" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur">
+                    <img src="https://i.ibb.co/mC2F216C/2150dece-6bac-4f3a-b951-8f4723766b6a.jpg" alt="Vue sur la piscine et le mazet" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">La Piscine & sa Vue</h4>
+                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Piscine & Vue</h4>
+                </div>
+
+                 <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="vie">
+                    <img src="https://i.ibb.co/YF3kQ6rg/cuisine.jpg" alt="Cuisine ouverte" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">La Cuisine</h4>
                 </div>
                 
-                <div class="group relative rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://i.postimg.cc/Wz89G6rC/Capture-d-cran-2025-06-06-133846.png" alt="Écran interactif géant pour les jeux et le dessin" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                 <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="chambres">
+                    <img src="https://i.ibb.co/vfvnWtK/Chambre-suite-parental.jpg" alt="Suite parentale" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Suite Parentale</h4>
+                </div>
+
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="detente">
+                     <img src="https://i.ibb.co/BVhxXpPV/9e34b306-3968-4e35-88ce-3a87d7cbca3f.jpg" alt="Jacuzzi pour se relaxer" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Le Jacuzzi</h4>
+                </div>
+                
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="detente">
+                    <img src="https://i.ibb.co/0p6ZF1VC/ecran-numerique-interactif-education-digitale-ecole-primaire-jpg.webp" alt="Écran interactif géant pour les jeux et le dessin" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                     <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">L'Écran de Jeux Interactif</h4>
                 </div>
 
-                <div class="group relative rounded-lg overflow-hidden shadow-lg">
-                    <img src="<a href="https://ibb.co/sp58jbrZ"><img src="https://i.ibb.co/7xgsvjFq/ee3bfe34-335f-4dc3-9244-27c508e90381.jpg" alt="ee3bfe34-335f-4dc3-9244-27c508e90381" border="0"></a>" alt="Grande table sur la terrasse pour les repas en extérieur" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur">
+                    <img src="https://i.ibb.co/nM515h9F/b3e4ca8b-5bdb-4035-830f-be62eaacbf7f.jpg" alt="Grande table sur la terrasse pour les repas en extérieur" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                     <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">La Terrasse Aménagée</h4>
                 </div>
 
-                <div class="group relative rounded-lg overflow-hidden shadow-lg">
-                    <img src="<a href="https://ibb.co/B5R3P8Cw"><img src="https://i.ibb.co/dwyMcn57/e27445d3-4672-440a-b1fc-3a93b505ce91.jpg" alt="e27445d3-4672-440a-b1fc-3a93b505ce91" border="0"></a>" alt="Grand trampoline pour le plaisir de tous" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                 <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="chambres">
+                    <img src="https://i.ibb.co/gMwqxKf1/eec26855-6480-46ed-ab6b-025ddb9e094a.jpg" alt="Intérieur du chalet indépendant" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Le Trampoline Géant</h4>
+                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Intérieur du Chalet</h4>
                 </div>
                 
-                <div class="group relative rounded-lg overflow-hidden shadow-lg">
-                    <img src="<a href="https://ibb.co/dwWkFDBJ"><img src="https://i.ibb.co/9k8y6Wn3/168c251e-7b25-45e4-b63e-66bf9b59cb19.jpg" alt="168c251e-7b25-45e4-b63e-66bf9b59cb19" border="0"></a>" alt="Terrain de pétanque pour des parties endiablées" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur">
+                    <img src="https://i.ibb.co/9k8y6Wn3/168c251e-7b25-45e4-b63e-66bf9b59cb19.jpg" alt="Terrain de pétanque pour des parties endiablées" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                     <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Le Terrain de Pétanque</h4>
                 </div>
                 
-                <div class="group relative rounded-lg overflow-hidden shadow-lg">
-                    <img src="<a href="https://ibb.co/50xDDW3"><img src="https://i.ibb.co/8C433Dw/sdb-suite-parentale1.jpg" alt="sdb-suite-parentale1" border="0"></a>" alt="Salle de bain moderne avec double vasque en bois" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                 <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="vie">
+                    <img src="https://i.ibb.co/jYxFMP8/Whats-App-Image-2025-06-06-at-13-13-48-2.jpg" alt="Salon avec cheminée" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Salle de Bain Élégante</h4>
+                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Le Salon</h4>
                 </div>
 
             </div>
@@ -198,7 +233,7 @@
                  </ul>
             </div>
             <div class="rounded-lg overflow-hidden shadow-xl">
-                 <img src="https://i.postimg.cc/1V32K87x/Whats-App-Image-2025-06-06-at-13-13-48-3.jpg" alt="Coin détente dans le jardin" class="w-full h-auto object-cover">
+                 <img src="https://i.ibb.co/nM515h9F/b3e4ca8b-5bdb-4035-830f-be62eaacbf7f.jpg" alt="Coin détente dans le jardin" class="w-full h-auto object-cover">
             </div>
          </div>
     </section>
@@ -209,28 +244,33 @@
             <div class="max-w-2xl mx-auto bg-gray-800 p-8 md:p-12 rounded-2xl shadow-2xl border border-gray-700">
                 <h3 class="text-4xl font-extrabold text-center mb-4 text-amber-400">Contact & Réservation</h3>
                 <p class="text-center text-gray-300 mb-8">Envoyez-nous une demande et nous vous répondrons sous 24h.</p>
-                <form id="bookingForm" class="space-y-6">
+                <!-- Formulaire connecté à votre adresse e-mail via Formspree -->
+                <form action="https://formspree.io/f/xzzgdeog" method="POST" class="space-y-6">
                     <div>
                         <label for="name" class="block text-sm font-medium text-gray-300">Nom complet</label>
-                        <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+                        <input type="text" id="name" name="Nom" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
                     </div>
                     <div>
                         <label for="email" class="block text-sm font-medium text-gray-300">Adresse e-mail</label>
-                        <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+                        <input type="email" id="email" name="Email" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label for="checkin" class="block text-sm font-medium text-gray-300">Date d'arrivée</label>
-                            <input type="date" id="checkin" name="checkin" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500" style="color-scheme: dark;">
+                            <input type="date" id="checkin" name="Arrivée" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500" style="color-scheme: dark;">
                         </div>
                         <div>
                             <label for="checkout" class="block text-sm font-medium text-gray-300">Date de départ</label>
-                            <input type="date" id="checkout" name="checkout" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500" style="color-scheme: dark;">
+                            <input type="date" id="checkout" name="Départ" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500" style="color-scheme: dark;">
                         </div>
                     </div>
                     <div>
                         <label for="guests" class="block text-sm font-medium text-gray-300">Nombre de voyageurs</label>
-                        <input type="number" id="guests" name="guests" min="1" max="13" required placeholder="Jusqu'à 13 personnes" class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+                        <input type="number" id="guests" name="Voyageurs" min="1" max="13" required placeholder="Jusqu'à 13 personnes" class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+                    </div>
+                     <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300">Message (facultatif)</label>
+                        <textarea id="message" name="Message" rows="4" class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"></textarea>
                     </div>
                     <div class="text-center pt-4">
                         <button type="submit" class="w-full bg-amber-500 text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-amber-400 transition-colors text-lg">
@@ -238,7 +278,6 @@
                         </button>
                     </div>
                 </form>
-                <div id="form-message" class="mt-6 text-center"></div>
             </div>
         </div>
     </section>
@@ -261,32 +300,7 @@
                 });
             });
         });
-
-        // Handle form submission
-        const form = document.getElementById('bookingForm');
-        const formMessage = document.getElementById('form-message');
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault(); 
-
-            const formData = new FormData(form);
-            const name = formData.get('name');
-            const checkin = new Date(formData.get('checkin')).toLocaleDateString('fr-FR');
-            const checkout = new Date(formData.get('checkout')).toLocaleDateString('fr-FR');
-            
-            // Simple validation
-            if (!name || !formData.get('email') || !formData.get('checkin') || !formData.get('checkout') || !formData.get('guests')) {
-                formMessage.innerHTML = '<p class="text-red-400 font-medium">Veuillez remplir tous les champs du formulaire.</p>';
-                return;
-            }
-
-            // Display a success message
-            // Dans une application réelle, ces données seraient envoyées à un serveur.
-            formMessage.innerHTML = `<p class="text-amber-400 font-semibold">Merci ${name} ! Votre demande pour un séjour du ${checkin} au ${checkout} a bien été envoyée. Nous vous contacterons très prochainement par e-mail.</p>`;
-            
-            form.reset();
-        });
-
+        
         // Set min date for date pickers to today
         const today = new Date().toISOString().split('T')[0];
         document.getElementById('checkin').setAttribute('min', today);
@@ -297,6 +311,31 @@
             checkinDate.setDate(checkinDate.getDate() + 1); // Minimum 1 night stay
             const nextDay = checkinDate.toISOString().split('T')[0];
             document.getElementById('checkout').setAttribute('min', nextDay);
+        });
+
+        // Gallery Filter
+        const filterButtons = document.querySelectorAll('#gallery-filters .filter-button');
+        const galleryItems = document.querySelectorAll('#gallery-grid .gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Manage active state for buttons
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-amber-500', 'text-gray-900');
+                    btn.classList.add('bg-gray-700', 'text-gray-200');
+                });
+                this.classList.add('bg-amber-500', 'text-gray-900');
+                this.classList.remove('bg-gray-700', 'text-gray-200');
+
+                const filter = this.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    item.classList.add('hidden');
+                    if (item.getAttribute('data-category') === filter || filter === 'all') {
+                        item.classList.remove('hidden');
+                    }
+                });
+            });
         });
 
     </script>
