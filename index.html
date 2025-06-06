@@ -3,15 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lou mazet 1951 - Charme entre Cévennes et Mer</title>
+
+    <!-- 1. Optimisation SEO (Titre & Description) -->
+    <title>Location grande maison 13 pers. avec piscine – Cévennes & Méditerranée</title>
+    <meta name="description" content="Louez notre gîte familial pour 12-13 personnes à Saint-Nazaire-des-Gardies. Grande maison avec piscine sécurisée, jacuzzi, écran interactif. Proche Cévennes et plages.">
+
+    <!-- 3. Balises pour un meilleur partage sur les réseaux sociaux (Open Graph) -->
+    <meta property="og:title" content="Lou mazet 1951 - Gîte 13 personnes avec piscine dans les Cévennes">
+    <meta property="og:description" content="Un mazet authentique rénové, entre les Cévennes (patrimoine mondial de l'UNESCO) et la Méditerranée.">
+    <meta property="og:image" content="https://i.ibb.co/mC2F216/2150dece-6bac-4f3a-b951-8f4723766b6a.jpg">
+    <meta property="og:url" content="https://VOTRE_URL_GITHUB_PAGES.github.io/lou-mazet-1951/">
+    <meta property="og:type" content="website">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Police de caractères : Nunito -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <!-- 2. Script de données structurées (JSON-LD) pour Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VacationRental",
+      "name": "Lou mazet 1951",
+      "description": "Un mazet authentique de 1951 rénové à Saint-Nazaire-des-Gardies, entre mer et montagne. Parfait pour les familles jusqu'à 13 personnes.",
+      "image": "https://i.ibb.co/mC2F216/2150dece-6bac-4f3a-b951-8f4723766b6a.jpg",
+      "accommodationCategory": "Gîte",
+      "url": "https://VOTRE_URL_GITHUB_PAGES.github.io/lou-mazet-1951/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Saint-Nazaire-des-Gardies",
+        "addressRegion": "Occitanie",
+        "addressCountry": "FR"
+      },
+      "petsAllowed": false,
+      "maximumAttendeeCapacity": 13,
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Piscine", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Jacuzzi", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Barbecue", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Plancha", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Climatisation", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Parking gratuit", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Écran interactif 75 pouces", "value": true }
+      ]
+    }
+    </script>
+    
     <style>
         body {
-            /* Application de la nouvelle police */
             font-family: 'Nunito', sans-serif;
         }
         .hero-bg {
@@ -19,15 +59,13 @@
             background-size: cover;
             background-position: center;
         }
-        /* Motif de fond adapté pour le thème sombre */
         .bg-pattern-dark {
-             background-color: #1f2937; /* gray-800 */
+             background-color: #1f2937;
              background-image:  linear-gradient(135deg, #374151 25%, transparent 25%), linear-gradient(225deg, #374151 25%, transparent 25%), linear-gradient(45deg, #374151 25%, transparent 25%), linear-gradient(315deg, #374151 25%, #1f2937 25%);
              background-position:  10px 0, 10px 0, 0 0, 0 0;
              background-size: 20px 20px;
              background-repeat: repeat;
         }
-        /* -- CSS pour l'animation d'apparition -- */
         .gallery-item {
             opacity: 0;
             transform: translateY(20px);
@@ -43,10 +81,8 @@
         }
     </style>
 </head>
-<!-- Fond sombre et texte clair -->
 <body class="bg-gray-900 text-gray-200">
 
-    <!-- Header adapté au thème sombre -->
     <header class="bg-gray-900/80 backdrop-blur-lg shadow-lg shadow-amber-500/5 sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-extrabold text-white">Lou mazet 1951</h1>
@@ -59,7 +95,6 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero-bg h-[70vh] text-white flex items-center justify-center">
         <div class="container mx-auto px-6 text-center bg-black bg-opacity-60 p-10 rounded-xl shadow-2xl">
             <h2 class="text-5xl md:text-6xl font-extrabold mb-4">Votre Échappée Belle</h2>
@@ -68,7 +103,6 @@
         </div>
     </section>
 
-    <!-- Introduction -->
     <section id="description" class="py-20">
         <div class="container mx-auto px-6">
             <div class="text-center">
@@ -79,7 +113,7 @@
             </div>
             <div class="mt-16 grid md:grid-cols-2 gap-12 items-center">
                 <div class="rounded-lg overflow-hidden shadow-xl">
-                    <img src="https://i.ibb.co/8npnx8rC/vue-bouada-et-pisince.jpg" alt="Espace bar extérieur convivial" class="w-full h-auto object-cover">
+                    <img src="https://i.ibb.co/8npnx8rC/vue-bouada-et-pisince.jpg" alt="Espace bar extérieur et piscine du gîte pour 13 personnes" class="w-full h-auto object-cover">
                 </div>
                 <div>
                     <h4 class="font-bold text-3xl mb-4 text-white">Le logement</h4>
@@ -94,59 +128,28 @@
         </div>
     </section>
     
-    <!-- Activités Section -->
     <section id="activites" class="py-20 bg-pattern-dark">
         <div class="container mx-auto px-6 text-center">
             <h3 class="text-4xl font-extrabold text-amber-400 mb-12">Un Paradis pour Petits et Grands</h3>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 max-w-7xl mx-auto">
-                <!-- Items -->
-                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
-                    <svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5.636 5.636a9 9 0 1 1 12.728 0M12 3v9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
-                    <span class="font-semibold text-white text-sm">Piscine</span>
-                </div>
-                 <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
-                    <svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.362-3.797A8.333 8.333 0 0 1 15.362 5.214Z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 21a8.25 8.25 0 0 0 3.86-1.026M18.75 1.936a7.5 7.5 0 0 0-4.18-1.412A12.27 12.27 0 0 0 9 3c-2.164 0-4.12.79-5.617 2.149a12.009 12.009 0 0 0-2.31 4.145 12.009 12.009 0 0 0 .548 10.542A12.036 12.036 0 0 0 9 21c2.193 0 4.22-.818 5.783-2.186a12.04 12.04 0 0 0 2.96-5.458 11.963 11.963 0 0 0-1.02-6.983 7.502 7.502 0 0 0-1.94-2.438Z" /></svg>
-                    <span class="font-semibold text-white text-sm">Jacuzzi</span>
-                </div>
-                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
-                    <svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
-                    <span class="font-semibold text-white text-sm text-center">Écran Interactif</span>
-                </div>
-                 <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
-                    <svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    <span class="font-semibold text-white text-sm">Barbecue</span>
-                </div>
-                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
-                     <svg class="w-12 h-12 text-amber-400 mb-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                     </svg>
-                    <span class="font-semibold text-white text-sm">Plancha</span>
-                </div>
-                 <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
-                    <svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 9.563A2.25 2.25 0 0 1 11.25 7.5h1.5A2.25 2.25 0 0 1 15 9.75v4.5A2.25 2.25 0 0 1 12.75 16.5h-1.5A2.25 2.25 0 0 1 9 14.25v-4.5Z" /></svg>
-                    <span class="font-semibold text-white text-sm">Pétanque</span>
-                </div>
-                 <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
-                    <svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.75a5.25 5.25 0 0 1 5.25 5.25H6.75a5.25 5.25 0 0 1 5.25-5.25Z M12 6.75V3m0 3.75a5.25 5.25 0 0 0-5.25 5.25H17.25a5.25 5.25 0 0 0-5.25-5.25Z M12 18.75V12m0 6.75a5.25 5.25 0 0 1-5.25-5.25h10.5a5.25 5.25 0 0 1-5.25 5.25Z" /></svg>
-                    <span class="font-semibold text-white text-sm">Trampoline</span>
-                </div>
-                 <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all">
-                    <svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 6h-15a2.25 2.25 0 0 0-2.25 2.25v5.25a2.25 2.25 0 0 0 2.25 2.25h15a2.25 2.25 0 0 0 2.25-2.25V8.25A2.25 2.25 0 0 0 19.5 6Z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15.75V12m0 0V8.25m0 3.75h3m-3 0H9"></path></svg>
-                    <span class="font-semibold text-white text-sm">Ping-Pong</span>
-                </div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5.636 5.636a9 9 0 1 1 12.728 0M12 3v9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg><span class="font-semibold text-white text-sm">Piscine</span></div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.362-3.797A8.333 8.333 0 0 1 15.362 5.214Z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 21a8.25 8.25 0 0 0 3.86-1.026M18.75 1.936a7.5 7.5 0 0 0-4.18-1.412A12.27 12.27 0 0 0 9 3c-2.164 0-4.12.79-5.617 2.149a12.009 12.009 0 0 0-2.31 4.145 12.009 12.009 0 0 0 .548 10.542A12.036 12.036 0 0 0 9 21c2.193 0 4.22-.818 5.783-2.186a12.04 12.04 0 0 0 2.96-5.458 11.963 11.963 0 0 0-1.02-6.983 7.502 7.502 0 0 0-1.94-2.438Z" /></svg><span class="font-semibold text-white text-sm">Jacuzzi</span></div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg><span class="font-semibold text-white text-sm text-center">Écran Interactif</span></div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg><span class="font-semibold text-white text-sm">Barbecue</span></div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><span class="font-semibold text-white text-sm">Plancha</span></div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 9.563A2.25 2.25 0 0 1 11.25 7.5h1.5A2.25 2.25 0 0 1 15 9.75v4.5A2.25 2.25 0 0 1 12.75 16.5h-1.5A2.25 2.25 0 0 1 9 14.25v-4.5Z" /></svg><span class="font-semibold text-white text-sm">Pétanque</span></div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.75a5.25 5.25 0 0 1 5.25 5.25H6.75a5.25 5.25 0 0 1 5.25-5.25Z M12 6.75V3m0 3.75a5.25 5.25 0 0 0-5.25 5.25H17.25a5.25 5.25 0 0 0-5.25-5.25Z M12 18.75V12m0 6.75a5.25 5.25 0 0 1-5.25-5.25h10.5a5.25 5.25 0 0 1-5.25 5.25Z" /></svg><span class="font-semibold text-white text-sm">Trampoline</span></div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-amber-500/20 hover:-translate-y-2 transition-all"><svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 6h-15a2.25 2.25 0 0 0-2.25 2.25v5.25a2.25 2.25 0 0 0 2.25 2.25h15a2.25 2.25 0 0 0 2.25-2.25V8.25A2.25 2.25 0 0 0 19.5 6Z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15.75V12m0 0V8.25m0 3.75h3m-3 0H9"></path></svg><span class="font-semibold text-white text-sm">Ping-Pong</span></div>
             </div>
             <div class="mt-8 text-gray-300">
-                <p>... mais aussi un parc de jeux pour enfants, des vélos à disposition, et un terrain de tennis gratuit à 5 minutes !</p>
+                <p>... mais aussi un **parc de jeux** pour enfants, des **vélos** à disposition, et un **terrain de tennis** gratuit à 5 minutes !</p>
             </div>
         </div>
     </section>
 
-    <!-- Photo Gallery -->
     <section id="photos" class="py-20">
         <div class="container mx-auto px-6">
             <h3 class="text-4xl font-extrabold text-center mb-6 text-amber-400">Explorez le Mazet</h3>
-            
-            <!-- Filter Buttons -->
             <div id="gallery-filters" class="flex justify-center flex-wrap gap-4 mb-12">
                 <button class="filter-button active bg-amber-500 text-gray-900 font-bold py-2 px-5 rounded-full" data-filter="all">Tous</button>
                 <button class="filter-button bg-gray-700 text-gray-200 font-bold py-2 px-5 rounded-full hover:bg-amber-500 hover:text-gray-900 transition-colors" data-filter="exterieur">Extérieur</button>
@@ -154,120 +157,34 @@
                 <button class="filter-button bg-gray-700 text-gray-200 font-bold py-2 px-5 rounded-full hover:bg-amber-500 hover:text-gray-900 transition-colors" data-filter="chambres">Chambres</button>
                 <button class="filter-button bg-gray-700 text-gray-200 font-bold py-2 px-5 rounded-full hover:bg-amber-500 hover:text-gray-900 transition-colors" data-filter="detente">Détente</button>
             </div>
-
-            <!-- Gallery Grid -->
             <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur">
-                    <img src="https://i.ibb.co/mC2F216C/2150dece-6bac-4f3a-b951-8f4723766b6a.jpg" alt="Vue sur la piscine et le mazet" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Piscine & Vue</h4>
-                </div>
-
-                 <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="vie">
-                    <img src="https://i.ibb.co/YF3kQ6rg/cuisine.jpg" alt="Cuisine ouverte" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">La Cuisine</h4>
-                </div>
-                
-                 <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="chambres">
-                    <img src="https://i.ibb.co/vfvnWtK/Chambre-suite-parental.jpg" alt="Suite parentale" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Suite Parentale</h4>
-                </div>
-
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="detente">
-                     <img src="https://i.ibb.co/BVhxXpPV/9e34b306-3968-4e35-88ce-3a87d7cbca3f.jpg" alt="Jacuzzi pour se relaxer" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Le Jacuzzi</h4>
-                </div>
-                
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="detente vie">
-                    <img src="https://i.ibb.co/0p6ZF1VC/ecran-numerique-interactif-education-digitale-ecole-primaire-jpg.webp" alt="Écran interactif géant pour les jeux et le dessin" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">L'Écran de Jeux Interactif</h4>
-                </div>
-
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur">
-                    <img src="https://i.ibb.co/nM515h9F/b3e4ca8b-5bdb-4035-830f-be62eaacbf7f.jpg" alt="Grande table sur la terrasse pour les repas en extérieur" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">La Terrasse Aménagée</h4>
-                </div>
-
-                 <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="chambres">
-                    <img src="https://i.ibb.co/gMwqxKf1/eec26855-6480-46ed-ab6b-025ddb9e094a.jpg" alt="Intérieur du chalet indépendant" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Intérieur du Chalet</h4>
-                </div>
-                
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="detente exterieur">
-                    <img src="https://i.ibb.co/9k8y6Wn3/168c251e-7b25-45e4-b63e-66bf9b59cb19.jpg" alt="Terrain de pétanque pour des parties endiablées" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Le Terrain de Pétanque</h4>
-                </div>
-                
-                 <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="vie">
-                    <img src="https://i.ibb.co/jYxFMP8/Whats-App-Image-2025-06-06-at-13-13-48-2.jpg" alt="Salon avec cheminée" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Le Salon</h4>
-                </div>
-                
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur">
-                    <img src="https://i.ibb.co/pr5ZffdD/Whats-App-Image-2025-06-06-at-13-19-32.jpg" alt="Vue du jardin" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Vue du Jardin</h4>
-                </div>
-
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur">
-                    <img src="https://i.ibb.co/twWJRMWx/Whats-App-Image-2025-06-06-at-13-19-24.jpg" alt="Vue sur la terrasse" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Coin Repas Extérieur</h4>
-                </div>
-
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur">
-                    <img src="https://i.ibb.co/QvY6BLBp/vue-entree-parking-et-jardin.jpg" alt="Entrée et parking" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Entrée & Parking</h4>
-                </div>
-
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="chambres">
-                    <img src="https://i.ibb.co/JwQQZRRw/chambre-mezzanine-double.jpg" alt="Chambre mezzanine double" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Chambre Mezzanine Double</h4>
-                </div>
-
-                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="chambres">
-                    <img src="https://i.ibb.co/s9jZfgsg/chambre-mezannine-simple.jpg" alt="Chambre mezzanine simple" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Chambre Mezzanine Simple</h4>
-                </div>
-
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur"><img src="https://i.ibb.co/mC2F216C/2150dece-6bac-4f3a-b951-8f4723766b6a.jpg" alt="Piscine privée avec vue sur le gîte pour 13 personnes" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Piscine & Vue</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="vie"><img src="https://i.ibb.co/YF3kQ6rg/cuisine.jpg" alt="Cuisine ouverte et équipée du gîte" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">La Cuisine</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="chambres"><img src="https://i.ibb.co/vfvnWtK/Chambre-suite-parental.jpg" alt="Suite parentale spacieuse" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Suite Parentale</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="detente"><img src="https://i.ibb.co/BVhxXpPV/9e34b306-3968-4e35-88ce-3a87d7cbca3f.jpg" alt="Jacuzzi extérieur pour la détente" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Le Jacuzzi</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="detente vie"><img src="https://i.ibb.co/0p6ZF1VC/ecran-numerique-interactif-education-digitale-ecole-primaire-jpg.webp" alt="Écran interactif géant pour jeux et films" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">L'Écran de Jeux Interactif</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur"><img src="https://i.ibb.co/nM515h9F/b3e4ca8b-5bdb-4035-830f-be62eaacbf7f.jpg" alt="Grande terrasse aménagée pour repas en groupe" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">La Terrasse Aménagée</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="chambres"><img src="https://i.ibb.co/gMwqxKf1/eec26855-6480-46ed-ab6b-025ddb9e094a.jpg" alt="Intérieur du chalet indépendant" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Intérieur du Chalet</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="detente exterieur"><img src="https://i.ibb.co/9k8y6Wn3/168c251e-7b25-45e4-b63e-66bf9b59cb19.jpg" alt="Terrain de pétanque dans le jardin" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Le Terrain de Pétanque</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="vie"><img src="https://i.ibb.co/jYxFMP8/Whats-App-Image-2025-06-06-at-13-13-48-2.jpg" alt="Salon convivial avec cheminée" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Le Salon</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur"><img src="https://i.ibb.co/pr5ZffdD/Whats-App-Image-2025-06-06-at-13-19-32.jpg" alt="Vue du jardin verdoyant" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Vue du Jardin</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur"><img src="https://i.ibb.co/twWJRMWx/Whats-App-Image-2025-06-06-at-13-19-24.jpg" alt="Coin repas extérieur sur la terrasse" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Coin Repas Extérieur</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="exterieur"><img src="https://i.ibb.co/QvY6BLBp/vue-entree-parking-et-jardin.jpg" alt="Vue de l'entrée et du parking privé" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Entrée & Parking</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="chambres"><img src="https://i.ibb.co/JwQQZRRw/chambre-mezzanine-double.jpg" alt="Chambre en mezzanine avec lit double" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Chambre Mezzanine Double</h4></div>
+                <div class="gallery-item group relative rounded-lg overflow-hidden shadow-lg" data-category="chambres"><img src="https://i.ibb.co/s9jZfgsg/chambre-mezannine-simple.jpg" alt="Chambre en mezzanine avec lit simple" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><h4 class="absolute bottom-0 left-0 p-4 font-bold text-white text-xl">Chambre Mezzanine Simple</h4></div>
             </div>
         </div>
     </section>
 
-    <!-- Informations Importantes -->
     <section class="py-20 bg-gray-800">
          <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
                  <h3 class="text-4xl font-extrabold mb-6 text-amber-400">Bon à savoir</h3>
                  <ul class="space-y-4 text-gray-300">
-                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-amber-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                        <span>**Piscine** : ouverte du 15 Mai au 15 Octobre.</span>
-                     </li>
-                      <li class="flex items-start">
-                        <svg class="w-6 h-6 text-amber-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m-4-5a1 1 0 011-1h2a1 1 0 110 2H6a1 1 0 01-1-1zm14-5a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1zm-4-1.5a.5.5 0 11-1 0 .5.5 0 011 0zm-2 3a.5.5 0 11-1 0 .5.5 0 011 0zm-2 3a.5.5 0 11-1 0 .5.5 0 011 0z"></path></svg>
-                        <span>**Jacuzzi** : disponible toute l'année pour votre détente.</span>
-                     </li>
-                      <li class="flex items-start">
-                        <svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
-                        <span>**Musique extérieure interdite** pour le respect du voisinage.</span>
-                     </li>
-                      <li class="flex items-start">
-                        <svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-                         <span>Logement non adapté aux fêtes (étudiants, EVG/EVJF...).</span>
-                     </li>
+                     <li class="flex items-start"><svg class="w-6 h-6 text-amber-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><span>**Piscine** : ouverte du 15 Mai au 15 Octobre.</span></li>
+                     <li class="flex items-start"><svg class="w-6 h-6 text-amber-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m-4-5a1 1 0 011-1h2a1 1 0 110 2H6a1 1 0 01-1-1zm14-5a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1zm-4-1.5a.5.5 0 11-1 0 .5.5 0 011 0zm-2 3a.5.5 0 11-1 0 .5.5 0 011 0zm-2 3a.5.5 0 11-1 0 .5.5 0 011 0z"></path></svg><span>**Jacuzzi** : disponible toute l'année pour votre détente.</span></li>
+                     <li class="flex items-start"><svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg><span>**Musique extérieure interdite** pour le respect du voisinage.</span></li>
+                     <li class="flex items-start"><svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg><span>Logement non adapté aux fêtes (étudiants, EVG/EVJF...).</span></li>
                  </ul>
             </div>
             <div class="rounded-lg overflow-hidden shadow-xl">
@@ -276,51 +193,26 @@
          </div>
     </section>
 
-    <!-- Reservation Form -->
     <section id="reservation" class="py-20 bg-gray-900">
         <div class="container mx-auto px-6">
             <div class="max-w-2xl mx-auto bg-gray-800 p-8 md:p-12 rounded-2xl shadow-2xl border border-gray-700">
                 <h3 class="text-4xl font-extrabold text-center mb-4 text-amber-400">Contact & Réservation</h3>
                 <p class="text-center text-gray-300 mb-8">Envoyez-nous une demande et nous vous répondrons sous 24h.</p>
-                <!-- Formulaire connecté à votre adresse e-mail via Formspree -->
                 <form action="https://formspree.io/f/xzzgdeog" method="POST" class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-300">Nom complet</label>
-                        <input type="text" id="name" name="Nom" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-300">Adresse e-mail</label>
-                        <input type="email" id="email" name="Email" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
-                    </div>
+                    <div><label for="name" class="block text-sm font-medium text-gray-300">Nom complet</label><input type="text" id="name" name="Nom" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"></div>
+                    <div><label for="email" class="block text-sm font-medium text-gray-300">Adresse e-mail</label><input type="email" id="email" name="Email" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"></div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="checkin" class="block text-sm font-medium text-gray-300">Date d'arrivée</label>
-                            <input type="date" id="checkin" name="Arrivée" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500" style="color-scheme: dark;">
-                        </div>
-                        <div>
-                            <label for="checkout" class="block text-sm font-medium text-gray-300">Date de départ</label>
-                            <input type="date" id="checkout" name="Départ" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500" style="color-scheme: dark;">
-                        </div>
+                        <div><label for="checkin" class="block text-sm font-medium text-gray-300">Date d'arrivée</label><input type="date" id="checkin" name="Arrivée" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500" style="color-scheme: dark;"></div>
+                        <div><label for="checkout" class="block text-sm font-medium text-gray-300">Date de départ</label><input type="date" id="checkout" name="Départ" required class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500" style="color-scheme: dark;"></div>
                     </div>
-                    <div>
-                        <label for="guests" class="block text-sm font-medium text-gray-300">Nombre de voyageurs</label>
-                        <input type="number" id="guests" name="Voyageurs" min="1" max="13" required placeholder="Jusqu'à 13 personnes" class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
-                    </div>
-                     <div>
-                        <label for="message" class="block text-sm font-medium text-gray-300">Message (facultatif)</label>
-                        <textarea id="message" name="Message" rows="4" class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"></textarea>
-                    </div>
-                    <div class="text-center pt-4">
-                        <button type="submit" class="w-full bg-amber-500 text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-amber-400 transition-colors text-lg">
-                            Envoyer ma demande de réservation
-                        </button>
-                    </div>
+                    <div><label for="guests" class="block text-sm font-medium text-gray-300">Nombre de voyageurs</label><input type="number" id="guests" name="Voyageurs" min="1" max="13" required placeholder="Jusqu'à 13 personnes" class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"></div>
+                    <div><label for="message" class="block text-sm font-medium text-gray-300">Message (facultatif)</label><textarea id="message" name="Message" rows="4" class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"></textarea></div>
+                    <div class="text-center pt-4"><button type="submit" class="w-full bg-amber-500 text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-amber-400 transition-colors text-lg">Envoyer ma demande de réservation</button></div>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-gray-400 py-8">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; 2025 Lou mazet 1951. Tous droits réservés.</p>
@@ -329,33 +221,22 @@
     </footer>
 
     <script>
-        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
-        
-        // Set min date for date pickers to today
         const today = new Date().toISOString().split('T')[0];
         document.getElementById('checkin').setAttribute('min', today);
-
         document.getElementById('checkin').addEventListener('change', function() {
-            // Ensure checkout date is after check-in date
             const checkinDate = new Date(this.value);
-            checkinDate.setDate(checkinDate.getDate() + 1); // Minimum 1 night stay
+            checkinDate.setDate(checkinDate.getDate() + 1);
             const nextDay = checkinDate.toISOString().split('T')[0];
             document.getElementById('checkout').setAttribute('min', nextDay);
         });
-
-        // Gallery Filter & Animation
         const filterButtons = document.querySelectorAll('#gallery-filters .filter-button');
         const galleryItems = document.querySelectorAll('#gallery-grid .gallery-item');
-
-        // Animation on scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -364,37 +245,24 @@
                 }
             });
         }, { threshold: 0.1 });
-
-        galleryItems.forEach(item => {
-            observer.observe(item);
-        });
-
-        // Filter logic
+        galleryItems.forEach(item => { observer.observe(item); });
         filterButtons.forEach(button => {
             button.addEventListener('click', function() {
-                // Manage active state for buttons
                 filterButtons.forEach(btn => {
                     btn.classList.remove('bg-amber-500', 'text-gray-900');
                     btn.classList.add('bg-gray-700', 'text-gray-200');
                 });
                 this.classList.add('bg-amber-500', 'text-gray-900');
                 this.classList.remove('bg-gray-700', 'text-gray-200');
-
                 const filter = this.getAttribute('data-filter');
-                
                 galleryItems.forEach(item => {
-                    // Hide all items first
                     item.classList.add('hidden');
-                    
-                    // Show filtered items
                     if (item.dataset.category.includes(filter) || filter === 'all') {
                        item.classList.remove('hidden');
                     }
                 });
             });
         });
-
     </script>
-
 </body>
 </html>
